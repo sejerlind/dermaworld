@@ -1,13 +1,729 @@
+@charset "UTF-8";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: #212121;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#page-wrap {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.burgerMenu {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+.burgerMenu ul {
+  padding: 0;
+  margin-top: 0;
+}
+.burgerMenu ul button {
+  background-color: #212121;
+  color: #f7f7f7;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  font-size: 1em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+}
+
+/*  position og størrelse af burger btn */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 20px;
+}
+
+/* Color af burger bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* placering og størrelse af luk knappen */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* color af luk knappen */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  right: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #212121;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  padding: 0.8em;
+}
+
+/* overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  color: #f7f7f7;
+  margin-bottom: 10px;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dropdown__item a {
+  color: #212121;
+  text-decoration: none;
+}
+
+.bigheader {
+  display: none;
+}
+
+.headerHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3em;
+  width: 80%;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerHolder .logo__section {
+  text-align: left;
+}
+.headerHolder a {
+  color: #212121;
+  text-decoration: none;
+}
+.headerHolder h1 {
+  display: inline;
+}
+.headerHolder .header__h1__world {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+  color: #575757;
+  border-bottom: 7px solid #575757;
+  border-radius: 0px 0px 0px 6px;
+}
+.headerHolder .leo__section {
+  text-align: left;
+  width: 8em;
+}
+.headerHolder .leo__section p {
+  display: inline;
+  font-size: 0.8em;
+}
+.headerHolder .leo__section b {
+  font-size: 0.8em;
+}
+.headerHolder .search__section {
+  margin-top: 1em;
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 25.5px;
+  padding: 0.3em;
+  width: 90%;
+}
+.headerHolder .search__section input {
+  display: inline;
+  width: 95%;
+  border: none;
+  color: #575757;
+  margin-right: 0.3em;
+  border-radius: 10px;
+}
+.headerHolder .search__section label {
+  border: none;
+  color: #212121;
+  background-color: #fff;
+}
+
+.banner__section {
+  background-image: url("/src/Assets/Images/banner-image.WebP");
+  background-color: #cccccc;
+  height: 25em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.banner__section section {
+  padding: 2em;
+}
+.banner__section section img {
+  width: auto;
+  height: 75%;
+  padding: 1em 1em 0em 1em;
+}
+.banner__section section p {
+  color: #fff;
+  font-size: 1.2em;
+  padding: 1em;
+}
+.banner__section .banner__patiens__img {
+  display: none;
+}
+
+.infobox__section {
+  padding: 2em;
+  background-color: #eee;
+}
+.infobox__section img {
+  width: 100%;
+  height: auto;
+}
+.infobox__section .infobox__txt {
+  color: #00609C;
+  font-size: 1.2em;
+  line-height: 130%;
+}
+
+.about__section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.about__section .about__circle {
+  padding: 2em;
+}
+.about__section h3 {
+  color: #00609C;
+}
+.about__section a {
+  color: #C017A2;
+  text-decoration: none;
+}
+
+.hero__section {
+  background-color: #eee;
+  padding: 2em;
+}
+.hero__section h4 {
+  color: #00609C;
+  font-size: 1.5em;
+}
+.hero__section ul {
+  list-style-type: none;
+  padding: 0;
+}
+.hero__section .hero__btn {
+  background-color: #C017A2;
+  color: #fff;
+  padding: 1em;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 15em;
+  font-weight: bold;
+  transition: ease-in-out 0.5s;
+  margin: 1em 0em;
+}
+.hero__section .hero__btn:hover {
+  background-color: #ea53cf;
+}
+.hero__section .hero__btn__div {
+  position: relative;
+}
+.hero__section img {
+  display: none;
+}
+
+.heroModal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+}
+
+.heroModal__div {
+  position: relative;
+  width: 80%;
+  top: 25%;
+  transform: translate(-50% -50%);
+  padding: 2em;
+  z-index: 2000;
+}
+
+.heroModal__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 0;
+  background-color: #C017A2;
+  color: #fff;
+  padding: 1em;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+iframe {
+  width: 100%;
+  height: 20em;
+  aspect-ratio: 16/1;
+}
+
+.ClinicalTools__section .ClinicalTools__card__section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ClinicalTools__section .ClinicalTools__overskrift {
+  color: #00609C;
+  font-size: 1.4em;
+  padding-left: 2em;
+}
+.ClinicalTools__section .ClinicalTools__underOverskrift {
+  color: #00609C;
+  font-size: 1.4em;
+}
+.ClinicalTools__section .ClinicalTools__section__felx {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+.ClinicalTools__section .ClinicalTools__section__felx img {
+  width: 100%;
+  height: auto;
+}
+.ClinicalTools__section .ClinicalTools__section__felx div {
+  background-color: #eee;
+  padding: 2em;
+  width: 100%;
+}
+.ClinicalTools__section .ClinicalTools__section__felx div p {
+  padding-right: 2em;
+}
+.ClinicalTools__section .ClinicalTools__section__felx div a {
+  color: #C017A2;
+  text-decoration: none;
+}
+
+.KOLVideos__section {
+  background-color: #eee;
+}
+.KOLVideos__section .KOLVideos__overskrift {
+  padding: 2em;
+}
+.KOLVideos__section .KOLVideos__overskrift h6 {
+  color: #00609C;
+  font-size: 1.3em;
+  margin-bottom: 0;
+}
+.KOLVideos__section .KOLVideos__card__section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.KOLVideos__section .KOLVideos__card__section div {
+  padding: 2em;
+}
+.KOLVideos__section .KOLVideos__card__section div .KOLVideos__infotxt {
+  padding: 0;
+}
+
+.details__section {
+  background-color: #E6E7E8;
+}
+.details__section details {
+  width: 80%;
+  margin: 0 auto;
+}
+.details__section summary {
+  padding: 1em;
+  display: block;
+  padding-left: 4em;
+  position: relative;
+  cursor: pointer;
+  color: #00609C;
+}
+.details__section summary:before {
+  content: "▶";
+  padding: 0.3em;
+  position: absolute;
+  margin: 0;
+  left: 1em;
+  bottom: 0.6em;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
+}
+.details__section details[open] > summary:before {
+  transform: rotate(90deg);
+}
+.details__section ul {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer {
+  background-color: #00609C;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "footer__img__section" "footer__copyright__section" "footer__links__section";
+  padding: 2em;
+}
+footer .footer__img__section {
+  width: 100%;
+  height: auto;
+  grid-area: footer__img__section;
+}
+footer .footer__links__section {
+  width: 100%;
+  grid-area: footer__links__section;
+}
+footer .footer__links__section ul {
+  padding: 1em;
+}
+footer .footer__links__section ul .footer__links__forste a {
+  margin-left: 0;
+}
+footer .footer__links__section ul .footer__links__siste {
+  border: none;
+}
+footer .footer__links__section ul li {
+  display: inline;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+footer .footer__links__section ul li a {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 0.5em;
+  text-decoration: none;
+}
+footer .footer__copyright__section {
+  width: 100%;
+  grid-area: footer__copyright__section;
+}
+footer .footer__copyright__section .footer__copyright__txt {
+  line-height: 2em;
+}
+
+.Page__not__found {
+  text-align: center;
+  padding: 2em;
+}
+.Page__not__found h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+.Page__not__found button {
+  background-color: #C017A2;
+  color: #fff;
+  padding: 1em;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 15em;
+  font-weight: bold;
+  transition: ease-in-out 0.5s;
+  margin: 1em 0em;
+}
+.Page__not__found button:hover {
+  background-color: #ea53cf;
+}
+.Page__not__found button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .banner__section {
+    position: relative;
+    height: 20em;
+  }
+  .banner__section section {
+    width: 40%;
+  }
+  .banner__section .banner__patiens__img {
+    display: block;
+    position: absolute;
+    width: 50%;
+    right: 2em;
+    bottom: 0;
+    height: auto;
+  }
+
+  .infobox__section {
+    text-align: center;
+  }
+  .infobox__section .infobox__img__div img {
+    width: 45%;
+    height: auto;
+    grid-area: infobox_img;
+  }
+  .infobox__section .infobox__txt {
+    line-height: 130%;
+    margin-bottom: 0;
+    text-align: left;
+    padding: 0em 2em;
+  }
+
+  .ClinicalTools__section .ClinicalTools__overskrift {
+    margin-left: 3em;
+  }
+  .ClinicalTools__section .ClinicalTools__card__section {
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: nowrap;
+  }
+  .ClinicalTools__section .ClinicalTools__card__section .ClinicalTools__section__felx {
+    width: 40%;
+  }
+
+  .details__section {
+    background-color: #E6E7E8;
+  }
+  .details__section summary:before {
+    content: "▶";
+    left: 1em;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "footer__img__section footer__links__section footer__copyright__section";
+  }
+  footer .footer__img__section {
+    grid-area: footer__img__section;
+  }
+  footer .footer__links__section {
+    grid-area: footer__links__section;
+    margin-top: 35%;
+  }
+  footer .footer__copyright__section {
+    grid-area: footer__copyright__section;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bm-burger-button {
+    display: none;
+  }
+
+  .bigheader {
+    margin-top: 2em;
+    display: block;
+  }
+  .bigheader ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 80%;
+  }
+  .bigheader ul li {
+    list-style-type: none;
+    cursor: pointer;
+    display: inline;
+    padding-left: 0;
+    padding-right: 1em;
+    font-size: 1.2em;
+  }
+  .bigheader ul li:hover {
+    color: #878787;
+  }
+
+  .leo__section p {
+    display: inline;
+    font-size: 0.8em;
+  }
+  .leo__section b {
+    font-size: 0.8em;
+  }
+
+  .headerHolder {
+    padding: 1em;
+    margin-top: 0.5em;
+  }
+  .headerHolder h1 {
+    font-size: 1.7em;
+  }
+  .headerHolder .search__section {
+    width: 20em;
+    margin-left: auto;
+  }
+
+  .banner__section {
+    position: relative;
+    height: 25em;
+  }
+  .banner__section section {
+    width: 40%;
+    margin-left: 7em;
+  }
+  .banner__section .banner__patiens__img {
+    display: block;
+    position: absolute;
+    width: 45%;
+    right: 4em;
+    bottom: 0;
+    height: auto;
+  }
+
+  .infobox__section {
+    padding: 2em;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "infobox_img infoboxtxt" ". infoboxmere";
+  }
+  .infobox__section .infobox__img__div img {
+    width: 45%;
+    height: auto;
+    grid-area: infobox_img;
+    margin-left: 50%;
+  }
+  .infobox__section .infobox__txt {
+    color: #00609C;
+    width: 70%;
+    font-size: 1.75em;
+    line-height: 130%;
+    grid-area: infoboxtxt;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .infobox__section .infobox__more {
+    width: 65%;
+    margin-top: 0;
+    grid-area: infoboxmere;
+    text-align: left;
+  }
+  .infobox__section .infobox__more button {
+    padding: 1em;
+    background: #00609C;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 1em;
+    font-size: 1.2em;
+    transition: all 0.5s;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 10em;
+  }
+  .infobox__section .infobox__more button::after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 1em;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .infobox__section .infobox__more button:hover {
+    padding-right: 2em;
+    padding-left: 0.5em;
+  }
+  .infobox__section .infobox__more button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  .about__section {
+    justify-content: space-evenly;
+    padding-top: 2em;
+  }
+  .about__section .about__circle {
+    padding: 2em;
+    width: 25%;
+  }
+
+  .hero__section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .hero__section .hero__txt__div {
+    width: 30%;
+  }
+  .hero__section img {
+    padding-top: 2em;
+    width: 50%;
+    display: inline;
+  }
+
+  .heroModal__div {
+    left: 7%;
+    height: 100%;
+    top: 10%;
+  }
+  .heroModal__div iframe {
+    height: 75%;
+  }
+
+  .KOLVideos__section .KOLVideos__card__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .KOLVideos__section .KOLVideos__card__section div {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .KOLVideos__section .KOLVideos__card__section div img {
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+  }
+  .KOLVideos__section .KOLVideos__card__section div .KOLVideos__infotxt {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0em;
+  }
+
+  .details__section {
+    background-color: #E6E7E8;
+  }
+  .details__section summary:before {
+    content: "▶";
+  }
+
+  footer .footer__img__section {
+    padding: 2em;
+  }
+  footer .footer__links__section {
+    width: 120%;
+  }
+  footer .footer__copyright__section {
+    text-align: right;
+    margin-left: 35%;
+    width: 70%;
+  }
+  footer .footer__copyright__section p {
+    width: 60%;
+  }
 }

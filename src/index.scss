@@ -1,0 +1,884 @@
+body {
+    margin: 0;
+    color: #212121;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page-wrap {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+
+  //---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------------
+  //Header sidebar
+  .burgerMenu {
+      width: auto;
+      height: 100% ;
+      position: relative;
+
+    ul {
+        padding: 0;
+        margin-top: 0;
+        button {
+            background-color: #212121;
+            color: #f7f7f7;
+            border: none;
+            width: 100%;
+            text-align: left;
+           padding: 0;
+           font-size: 1em;
+           font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           cursor: pointer;
+        }
+    }
+  }
+
+  
+/*  position og størrelse af burger btn */
+.bm-burger-button {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 20px;
+  }
+  
+  /* Color af burger bars */
+  .bm-burger-bars {
+    background: #373a47;
+  }
+  
+  /* placering og størrelse af luk knappen */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* color af luk knappen */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+
+  
+  /*
+  Sidebar wrapper styles
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    right: 0;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: #212121;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    padding: 0.8em;
+  }
+  
+  /* overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  /* Individual item */
+.bm-item {
+    display: inline-block;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+.dropdown__item {
+  a {
+     color: #212121;
+  text-decoration: none;
+}
+  }
+ 
+.bigheader {
+    display: none;
+}
+
+.headerHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3em;
+  width: 80%;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  .logo__section {
+    text-align: left;
+  }
+  a {
+    color: #212121;
+    text-decoration: none;
+  }
+  h1 {
+    display: inline;
+  }
+  .header__h1__world {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    color: #575757;
+    border-bottom: 7px solid #575757;
+    border-radius: 0px 0px 0px 6px;
+
+  }
+  .leo__section {
+    text-align: left;
+    width: 8em;
+      p {
+    display: inline;
+    font-size: .8em;
+  }
+  b {
+    font-size: .8em;
+  }
+  }
+
+  .search__section {
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid rgb(33, 33, 33, 0.2);
+    border-radius: 25.5px;
+    padding: .3em;
+    width: 90%;
+    input {
+      display: inline;
+      width: 95%;
+      border: none;
+      color: #575757;
+      margin-right: .3em;
+      border-radius: 10px;
+    }
+    label {
+      border: none;
+      color: #212121;
+      background-color: #fff;
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------
+//header slut
+//----------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+//Banner start
+//----------------------------------------------------------------------------------
+
+.banner__section {
+  background-image: url('/src/Assets/Images/banner-image.WebP'); 
+  background-color: #cccccc;
+  height: 25em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  section {
+    padding: 2em;
+    img {
+      width: auto;
+      height: 75%;
+      padding: 1em 1em 0em 1em;
+    }
+    p {
+      color: #fff;
+      font-size: 1.2em;
+      padding: 1em;
+    }
+  }
+  .banner__patiens__img {
+    display: none;
+  }
+}
+
+//----------------------------------------------------------------------------------
+//Banner slut
+//----------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+//Infobox start
+//----------------------------------------------------------------------------------
+
+
+.infobox__section {
+  padding: 2em;
+  background-color: #eee;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .infobox__txt {
+    color: #00609C;
+    font-size: 1.2em;
+    line-height: 130%;
+  }
+}
+
+//----------------------------------------------------------------------------------
+//infobox slut
+//----------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+//about start
+//----------------------------------------------------------------------------------
+
+.about__section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  .about__circle {
+    padding: 2em;
+  }
+  h3 {
+    color: #00609C;
+  }
+  a {
+    color: #C017A2;
+    text-decoration: none;
+  }
+}
+
+//----------------------------------------------------------------------------------
+//about slut
+//----------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+//hero start
+//----------------------------------------------------------------------------------
+
+.hero__section {
+  background-color: #eee;
+  padding: 2em;
+ h4 {
+   color: #00609C;
+   font-size: 1.5em;
+ }
+ ul {
+  list-style-type: none;
+  padding: 0;
+ }
+ .hero__btn {
+   background-color: #C017A2;
+   color: #fff;
+   padding: 1em;
+   border: none;
+   border-radius: 100px;
+   cursor: pointer;
+   width: 15em;
+   font-weight: bold;
+   transition: ease-in-out .5s;
+   margin: 1em 0em;
+   &:hover {
+     background-color: lighten( #C017A2, 20);
+   }
+ }
+ .hero__btn__div {
+   position: relative;
+ }
+ img {
+   display: none;
+ }
+ 
+}
+
+.heroModal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0,.7);
+  z-index: 2000;
+}
+
+.heroModal__div {
+  position: relative;
+  width: 80%;
+  top: 25%;
+  transform: translate(-50% -50%);
+  padding: 2em;
+  z-index: 2000;
+}
+
+.heroModal__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 0;
+  background-color: #C017A2;
+  color: #fff;
+  padding: 1em;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+iframe {
+  width: 100%;
+  height: 20em;
+  aspect-ratio: 16/1;
+}
+
+//----------------------------------------------------------------------------------
+//hero slut
+//----------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+//ClinicalTools start
+//----------------------------------------------------------------------------------
+
+
+.ClinicalTools__section {
+
+  .ClinicalTools__card__section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .ClinicalTools__overskrift {
+    color: #00609C;
+    font-size: 1.4em;
+    padding-left: 2em;
+  }
+
+  .ClinicalTools__underOverskrift {
+    color: #00609C;
+    font-size: 1.4em;
+  }
+
+  .ClinicalTools__section__felx {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    div {
+      background-color: #eee;
+      padding: 2em;
+      width: 100%;
+      p {
+        padding-right: 2em;
+      }
+      a {
+        color: #C017A2;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------
+//ClinicalTools slut
+//----------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+//KOLVideos start
+//----------------------------------------------------------------------------------
+
+.KOLVideos__section {
+  background-color: #eee;
+
+  .KOLVideos__overskrift {
+    padding: 2em;
+    h6 {
+      color: #00609C;
+      font-size: 1.3em;
+      margin-bottom: 0;
+    }
+  }
+
+  .KOLVideos__card__section {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    
+    div{
+      padding: 2em;
+      .KOLVideos__infotxt {
+        padding: 0;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------
+//KOLVideos slut
+//----------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+//details start
+//----------------------------------------------------------------------------------
+
+.details__section {
+  background-color: #E6E7E8;
+  details {
+    width: 80%;
+    margin: 0 auto ;
+  }
+  
+  summary {
+    padding: 1em;
+    display: block;
+    padding-left: 4em;
+    position: relative;
+    cursor: pointer;
+    color: #00609C;
+  }
+  
+  summary:before {
+    content: '▶';
+    padding: .3em;
+    position: absolute;
+    margin: 0;
+    left: 1em;
+    bottom: .6em;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+  }
+  
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+  
+ul {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    list-style-type: none;
+   padding-left: 0;
+  }
+}
+
+
+//----------------------------------------------------------------------------------
+//details slut
+//----------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+//Footer start
+//----------------------------------------------------------------------------------
+
+footer {
+  background-color: #00609C;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "footer__img__section"
+    "footer__copyright__section"
+    "footer__links__section"
+  ;
+
+  padding: 2em;
+  .footer__img__section {
+    width: 100%;
+    height: auto;
+    grid-area: footer__img__section;
+  }
+  .footer__links__section {
+    width: 100%;
+    grid-area: footer__links__section;
+
+    
+    ul {
+      padding: 1em;
+
+      .footer__links__forste {
+        a {
+          margin-left: 0;
+        }
+      }
+      .footer__links__siste {
+        border: none;
+      }
+      li {
+        display: inline;
+        border-right: 1px solid rgba(255,255,255, 0.3);
+       
+        a {
+          color: rgba(255,255,255, 0.3);
+          margin: 0 .5em;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .footer__copyright__section {
+    width: 100%;
+    grid-area: footer__copyright__section;
+
+    .footer__copyright__txt {
+      line-height: 2em;
+    }
+  }
+}
+
+.Page__not__found {
+  text-align: center;
+  padding: 2em;
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+  button {
+    background-color: #C017A2;
+    color: #fff;
+    padding: 1em;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    width: 15em;
+    font-weight: bold;
+    transition: ease-in-out .5s;
+    margin: 1em 0em;
+    &:hover {
+      background-color: lighten( #C017A2, 20);
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+
+.banner__section {
+    position: relative;
+    height: 20em;
+    section {
+      width: 40%;
+    }
+    .banner__patiens__img {
+      display: block;
+      position: absolute;
+      width: 50%;
+      right: 2em;
+      bottom: 0;
+      height: auto;
+    }
+}
+ 
+  
+.infobox__section {
+  text-align: center;
+  .infobox__img__div {
+    img {
+    width: 45%;
+    height: auto;
+    grid-area: infobox_img;
+
+  }
+  }
+  
+  .infobox__txt {
+    line-height: 130%;
+    margin-bottom: 0;
+    text-align: left;
+    padding: 0em 2em;
+  }
+}
+
+.ClinicalTools__section {
+  .ClinicalTools__overskrift {
+  margin-left: 3em;
+  }
+  .ClinicalTools__card__section {
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: nowrap;
+
+  .ClinicalTools__section__felx {
+    width: 40%;
+  }
+
+}
+}
+
+.details__section {
+  background-color: #E6E7E8;
+  
+  summary:before {
+    content: '▶';
+    left: 1em;
+  }
+  
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "footer__img__section footer__links__section footer__copyright__section"
+  ;
+  .footer__img__section {
+    grid-area: footer__img__section;
+  }
+  .footer__links__section {
+    grid-area: footer__links__section;
+    margin-top: 35%;
+  }
+  .footer__copyright__section {
+    grid-area: footer__copyright__section;
+    text-align: right;
+  }
+}
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+  .bm-burger-button {
+    display: none;
+}
+
+.bigheader {
+  margin-top: 2em;
+  display: block;
+  ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 80%;
+    li {
+      list-style-type: none;
+      cursor: pointer;
+      display: inline;
+      padding-left: 0;
+      padding-right: 1em;
+      font-size: 1.2em;
+      &:hover {
+        color: lighten(#212121, 40);
+      }
+    }
+    
+  }
+}
+
+.leo__section {
+  p {
+display: inline;
+font-size: .8em;
+}
+b {
+font-size: .8em;
+}
+}
+
+.headerHolder {
+padding: 1em;
+margin-top: .5em;
+h1 {
+  font-size: 1.7em;
+}
+.search__section {
+width: 20em;
+margin-left: auto;
+}
+
+
+}
+
+
+.banner__section {
+  position: relative;
+  height: 25em;
+  section {
+    width: 40%;
+    margin-left: 7em;
+  }
+  .banner__patiens__img {
+    display: block;
+    position: absolute;
+    width: 45%;
+    right: 4em;
+    bottom: 0;
+    height: auto;
+  }
+}
+
+.infobox__section {
+  padding: 2em;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+    "infobox_img infoboxtxt"
+    ". infoboxmere"
+  ;
+  .infobox__img__div {
+    img {
+    width: 45%;
+    height: auto;
+    grid-area: infobox_img;
+    margin-left: 50%;
+
+  }
+  }
+  
+  .infobox__txt {
+    color: #00609C;
+    width: 70%;
+    font-size: 1.75em;
+    line-height: 130%;
+    grid-area: infoboxtxt;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .infobox__more {
+    width: 65%;
+    margin-top: 0;
+    grid-area: infoboxmere;
+    text-align: left;
+    button {
+      padding: 1em;
+      background: #00609C;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      border-radius: 1em;
+      font-size: 1.2em;
+      transition: all 0.5s;
+      box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+      position: relative;
+      width: 10em;
+    }
+    button::after {
+      content: '»';
+      position: absolute;
+      opacity: 0;  
+      top: 1em;
+      right: -20px;
+      transition: 0.5s;
+    }
+    button:hover{
+      padding-right: 2em;
+      padding-left: .5em;
+    }
+    
+    button:hover:after {
+      opacity: 1;
+      right: 10px;
+    }
+
+  }
+}
+
+.about__section {
+  justify-content: space-evenly;
+  padding-top: 2em;
+  .about__circle {
+    padding: 2em;
+    width: 25%;
+  }
+}
+
+.hero__section {
+  display: flex;
+  justify-content: space-evenly;
+  .hero__txt__div {
+    width: 30%;
+  }
+  img {
+    padding-top: 2em;
+    width: 50%;
+    display: inline;
+  }
+}
+
+.heroModal__div {
+  left: 7%;
+  height: 100%;
+  top: 10%;
+  iframe {
+    height: 75%;
+  }
+}
+
+
+.KOLVideos__section {
+  
+  .KOLVideos__card__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    div{
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      img {
+        cursor: pointer;
+        width: 50%;
+        height: auto;
+      }
+      // .KOLVideos__infotxt__title {
+      // }
+      .KOLVideos__infotxt {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0em;
+      }
+    }
+  }
+}
+
+.details__section {
+  background-color: #E6E7E8;
+  
+  summary:before {
+    content: '▶';
+  }
+  
+}
+
+footer {
+
+  .footer__img__section {
+    padding: 2em;
+  }
+  .footer__links__section {
+    width: 120%;
+  }
+  .footer__copyright__section {
+    text-align: right;
+    margin-left: 35%;
+    width: 70%;
+    p {
+      width: 60%;
+    }
+  }
+}
+}
